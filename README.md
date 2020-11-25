@@ -1,3 +1,3 @@
 # NS-1G
 
-test2
+test
