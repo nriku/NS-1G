@@ -66,8 +66,9 @@
 					navigator.getUserMedia  = HAS_GET_USER_MEDIA;
 					navigator.getUserMedia({video: true}, function(stream) {
 						// WebカメラのLocalMediaStreamオブジェクトからURLを作成し、
-						// videoのソースにそのURLを指定します。
-						webCamera.src = window.URL.createObjectURL(stream);
+						// videoのソースにそのURLを指定します
+						
+						webCamera.srcObject = stream;
 						$scope.localMediaStream = stream;
 						$scope.filming = true; // Webカメラ起動中にフラグを立てます。
 						// STEP2の動画のキャプチャ画像の取得処理を1000ミリ秒間隔で実行するようにします。
