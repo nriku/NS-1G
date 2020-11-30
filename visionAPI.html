@@ -168,9 +168,11 @@
 										}
 									],
 								}
-					
+					//エンドポイントがおかしい（URLにあくせすできずエラーはいてる）
 					// Vision APIのエンドポイントにPOSTします。
 					$http.post(VISION_API_URL + $scope.apiKey, data).success(function(data, status, headers, config) {
+					//$http.post("https://vision.googleapis.com/v1/images:annotate?key=AIzaSyDRG0wldp58I6MrbHLdFVZvjSLPHPOxVaA", data).success(function(data, status, headers, config) {
+
 						console.log("success")
 						console.log(data)
 						
